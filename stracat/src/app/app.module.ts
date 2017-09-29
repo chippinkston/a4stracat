@@ -10,8 +10,6 @@ import { ResultsComponent } from './results/results.component';
 
 
 @NgModule({
-
-
   imports: [
     BrowserModule,
     FormsModule

@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-secondary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Part I - Description</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label class="col-md-4 control-label">Project{{description.project}} </label>
+            <input [(ngModel)]="description.project" placeholder="Project Name" class="form-control col-md-5" type="text" maxlength="25" />
+          </div>
+          <!-- end form-group -->
+          <div class="form-group col-md-6">
+            <label for="sponsor_id" class="col-md-4 control-label">Sponsor/Developer </label>
+            <input class="form-control col-md-5 ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" ng-model="stracatCtrl.intro.sponsor" type="text" name="sponsor" maxlength="25" id="sponsor_id" title="Sponsor">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="location_id" class="col-md-4 control-label">Location </label>
+            <input class="form-control col-md-5 ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" ng-model="stracatCtrl.intro.location" type="text" maxlength="50" name="location" id="location_id" title="Location">
+          </div>
+          <!-- end form-group -->
+          <div class="form-group col-md-6">
+            <label for="prepared_by" class="col-md-4 control-label">Prepared by </label>
+            <input class="form-control col-md-5 ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched" ng-model="stracatCtrl.intro.prepared" type="text" maxlength="25" name="prepared_by" id="prepared_by" title="Prepared By">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="noise_level_id" class="col-md-4 control-label">Noise Level </label>
+            <input class="form-control col-md-5 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" ng-model="stracatCtrl.intro.noiseLevel" type="text" name="noise_level" id="noise_level_id" size="6" maxlength="6" title="Noise Level">
+          </div>
+          <!-- end form-group -->
+          <div class="form-group col-md-4">
+            <label for="prepared_date" class="col-md-12 control-label">Date </label>
+            <div class="input-group">
+              <input type="text" class="form-control col-md-4 ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty ng-valid-date ng-valid-required" uib-datepicker-popup="" ng-model="stracatCtrl.intro.date" is-open="datePickerPopup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" required="required"><div uib-datepicker-popup-wrap="" ng-model="date" ng-change="dateSelection(date)" template-url="uib/template/datepickerPopup/popup.html" class="ng-not-empty ng-valid">
+              <!-- ngIf: isOpen -->
+            </div>
+              <span class="input-group-btn">
+<button type="button" class="btn btn-default" ng-click="openDatePicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+</span>
+            </div>
+          </div>
+          <div class="form-group col-md-4" style="white-space: nowrap;">
+            <label for="noise_source_id" class="col-md-4 control-label">Primary Source(s)</label>
+            <input class="form-control col-md-5 ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" ng-model="stracatCtrl.intro.sources" type="text" name="noise_source" id="noise_source_id" maxlength="25" title="Noise Source">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
